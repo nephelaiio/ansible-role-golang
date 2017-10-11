@@ -11,6 +11,9 @@
   notify: extract tarball
   become: yes
 
+- name: flush handlers
+  meta: flush_handlers
+
 - name: create installation path
   file:
     path: "{{ golang_path }}"
