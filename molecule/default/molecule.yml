@@ -8,29 +8,14 @@ lint:
 platforms:
   - name: centos7
     image: centos:7
-    privileged: True
-    volume_mounts:
-      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
   - name: bionic
     image: ubuntu:bionic
-    privileged: True
-    volume_mounts:
-      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
   - name: xenial
     image: ubuntu:xenial
-    privileged: True
-    volume_mounts:
-      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
   - name: stretch
     image: debian:stretch
-    privileged: True
-    volume_mounts:
-      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
   - name: arch
     image: archlinux/base:latest
-    privileged: True
-    volume_mounts:
-      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
 provisioner:
   name: ansible
   lint:
